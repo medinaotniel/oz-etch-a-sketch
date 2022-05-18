@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/sketch.js" defer></script>
+  </head>
+  <body>
+    <div>
+      <!-- Header -->
+      <header class="header">
+        <h2 class="header__h2">
+          Etch a <span class="header__sketch">Sketch</span>
+        </h2>
+      </header>
+      <!-- Sketch -->
+      <main class="sketch">
+
+        <!-- Sketch Re-Size Slider -->
+        <div class="re-size__container">
+          <input
+            type="range"
+            id="re-size__input"
+            name="re-size__input"
+            min="2"
+            max="100"
+            value="16"
+            step="1"
+          />
+        </div>
+
+        <!-- Sketch Options -->
+        <aside class="sketch__options">
+          <div>
+            <input type="color" id="picker__input" name="picker__input" />
+            <label for="picker__input" id="picker__label"></label>
+          </div>
+          <button class="btn btn__black">Default</button>
+          <button class="btn btn__rainbow">Rainbow</button>
+          <button class="btn btn__random">Random</button>
+          <button class="btn btn__eraser">Eraser</button>
+          <button class="btn btn__clear">Clear</button>
+          <label for="re-size__input" id="re-size__label">16 X 16</label>
+        </aside>
+
+        <!-- Sketch Grid -->
+        <div class="sketch__grid"></div>
+      </main>
+    </div>
+  </body>
+</html>

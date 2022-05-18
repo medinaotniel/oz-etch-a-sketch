@@ -1,0 +1,172 @@
+/** Imported Fonts **/
+
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap");
+
+/** Global **/
+
+:root {
+  --pastel-blue: #7894eb;
+  --pastel-red: #ed6d77;
+  --pastel-green: #a8dadc;
+  --primary-font: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+
+  background-color: #f1f2f9;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+body,
+.sketch__options,
+.re-size__container,
+.sketch,
+.sketch__options,
+.sketch__grid,
+.grid__container {
+  display: flex;
+}
+
+body,
+.sketch__options,
+.re-size__container {
+  flex-direction: column;
+
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/** Header **/
+
+.header__h2 {
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 6rem;
+
+  width: 40rem;
+  margin-bottom: 6rem;
+  padding-top: 2rem;
+  padding-left: 2.5rem;
+
+  color: var(--pastel-red);
+  box-shadow: -1rem -1rem var(--pastel-blue);
+}
+
+#header__sketch {
+  border-bottom: 1rem dashed var(--pastel-green);
+}
+
+/** Sketch **/
+
+.sketch {
+  border: 1rem solid var(--pastel-red);
+}
+
+.sketch__options {
+  width: 20rem;
+
+  background-color: var(--pastel-green);
+}
+
+.sketch__options,
+button,
+#re-size__label {
+  font-family: var(--primary-font);
+}
+
+.sketch__grid {
+  flex-direction: column;
+
+  width: 70rem;
+  height: 70rem;
+
+  background-color: #fcfdfd;
+  box-shadow: 3rem -3rem var(--pastel-blue);
+}
+
+#picker__input {
+  width: 5rem;
+  height: 5rem;
+
+  border: 0.3rem solid #75989a;
+  background-color: #f1faee;
+}
+
+.sketch__options button,
+.sketch__options input {
+  cursor: pointer;
+}
+
+/** Grid Re-size Slider **/
+
+#re-size__input {
+  width: 50rem;
+
+  cursor: pointer;
+  transform: rotate(-90deg);
+
+  box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.4);
+
+  appearance: none;
+}
+
+.re-size__container {
+  width: 5rem;
+
+  background-color: #8d99ae;
+  box-shadow: -3rem 3rem #2b2d42;
+}
+
+#re-size__label {
+  font-size: 2rem;
+  font-weight: bold;
+
+  color: #2b2d42;
+}
+
+/** Grid **/
+
+.grid__container {
+  height: 100%;
+}
+
+.grid__block {
+  cursor: crosshair;
+
+  flex: 1;
+}
+
+/** Buttons **/
+
+.btn {
+  font-weight: bold;
+  
+  text-transform: uppercase;
+
+  position: relative;
+
+  padding: 1rem;
+
+  color: #fcfdfd;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #7079c0;
+  box-shadow: inset 0 -0.8rem 0 -0.4rem #454f9d;
+}
+
+.btn:active {
+  top: 0.3rem;
+}
