@@ -57,7 +57,7 @@ const sketching = (event) => {
 const sketchHandler = (event) => {
   if (sketching(event)) {
     let block = event.target;
-    if (settings.option === "rainbow") {
+    if (settings.option === true) {
       block.style.backgroundColor = randomRGB();
     } else {
       block.style.backgroundColor = settings.colour;
@@ -138,7 +138,7 @@ btnBlack.onclick = () => {
 };
 
 btnRainbow.onclick = () => {
-  settings.option = "rainbow";
+  settings.option = true;
 };
 
 btnRandom.onclick = () => {
@@ -158,6 +158,7 @@ reSize.oninput = (event) => {
 // Change the sketching colour using the color input
 picker.oninput = () => {  
   settings.colour = picker.value;
+  settings.option = false;
 };
 
 // Generate default grid
